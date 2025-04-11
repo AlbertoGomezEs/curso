@@ -15,20 +15,127 @@
 
         /*CABECERAAAAAAAAAAAA*/
 
-        h1{
-            color:green;
+        header{
+            font-family: cursive;
         }
 
+        h1{
+            color:green;
+            margin-left: 35%;
+            margin-top: 2%;
+            font-size: 50px;
+        }
 
+        /*navegacion*/
+
+        nav{
+            background-color: green;
+            height: 5vh;
+            font-size: 30px;
+            
+            
+        }
+
+        a{
+            text-decoration: none;
+            color:lightblue;
+            margin-left: 14%;
+        }
+
+        /*contenedor*/
+
+        #contenedor{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: auto auto;
+        }
+
+        .s1{
+            background-color: green;
+            width:90%;
+            margin-top:2%;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+            img{
+                width:30%;
+                margin-left: 30%;
+            }
+        
+        .s2{
+            background-color:green;
+            width:90%;
+            margin-left:10%;
+            margin-top:2%;
+            height: 420px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+        }
+            h2{
+                color:lightblue;
+                font-family: cursive;
+                font-size: 30px;
+            }
+            p{
+                color: lightblue;  
+            }
+
+        .s3{
+            background-color:green;
+            width:90%;
+            margin-top:2%;
+            height: 420px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+        }
+
+        .s4{
+            background-color:green;
+            width:90%;
+            margin-left:10%;
+            margin-top:2%;
+            height: 420px;
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Alberto Gómez</h1>
     </header>
-    <section>
-
-    </section>
+    <nav>
+        <a href="">Foto</a>
+        <a href="">Presentacion</a>
+        <a href="">Estudios</a>
+        <a href="">Aficciones</a>
+    </nav>
+    <div id="contenedor">
+        <section class="s1">
+            <img src="img/dibujo.jpg" alt="">
+        </section>
+        <section class="s2">
+            <h2>PRESENTACION</h2>
+            <p>Alberto Gómez Escribano</p>
+            <p>Edad: 27 años</p>
+            <p>Fecha Nacimiento: 17/11/1997</p>
+        </section>
+        <section class="s3">
+            <h2>ESTUDIOS</h2>
+            <p>Tecnico Medio Sistemas Microinformaticos y Redes</p>
+            <p>Tecnico Superior Administracion de Sistemas en Red</p>
+            <p>Aprobadas con plaza oposiciones OEP 2024 TAI</p>
+        </section>
+        <section class="s4">
+            <h2>AFICIONES</h2>
+            <p>Gimansio</p>
+            <p>Jugar al futbol</p>
+            <p>Pasear con mi perro</p>
+        </section>
     <footer>
 
     </footer>
