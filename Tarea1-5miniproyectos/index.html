@@ -5,103 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body{
+        body {
             background-color: lightblue;
+            font-family: Arial, sans-serif;
         }
-
-        /*CABECERAAAAAAAAAAAA*/
-
-        header{
+        /* Cabecera */
+        header {
             font-family: cursive;
-        }
-
-        h1{
-            color:green;
-            margin-left: 35%;
+            text-align: center;
             margin-top: 2%;
+        }
+        h1 {
+            color: green;
             font-size: 50px;
         }
-
-        /*navegacion*/
-
-        nav{
+        /* Navegación */
+        nav {
             background-color: green;
             height: 5vh;
-            font-size: 30px;
-            
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        a{
+        nav a {
             text-decoration: none;
-            color:lightblue;
-            margin-left: 14%;
+            color: lightblue;
+            margin: 0 2rem;
+            font-size: 20px;
         }
-
-        /*contenedor*/
-
-        #contenedor{
+        /* Contenedor principal */
+        #contenedor {
             display: grid;
-            grid-template-columns: 2fr 2fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
         }
 
         .s1{
-            background-color: green;
-            width:90%;
-            margin-top:2%;
             grid-column: 1/2;
             grid-row: 1/2;
         }
-
-            img{
-                width:30%;
-                margin-left: 30%;
-            }
-        
         .s2{
-            background-color:green;
-            width:90%;
-            margin-left:10%;
-            margin-top:2%;
-            height: 420px;
             grid-column: 2/3;
             grid-row: 1/2;
-
         }
-            h2{
-                color:lightblue;
-                font-family: cursive;
-                font-size: 30px;
-            }
-            p{
-                color: lightblue;  
-            }
-
         .s3{
-            background-color:green;
-            width:90%;
-            margin-top:2%;
-            height: 420px;
             grid-column: 1/2;
             grid-row: 2/3;
-
         }
-
         .s4{
-            background-color:green;
-            width:90%;
-            margin-left:10%;
-            margin-top:2%;
-            height: 420px;
             grid-column: 2/3;
             grid-row: 2/3;
-
         }
+
+        section {
+            background-color: green;
+            color: lightblue;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        section img {
+            width: 30%;
+            margin: 0 auto;
+            display: block;
+        }
+        h2 {
+            font-family: cursive;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+        }
+        /* Footer */
+        footer {
+            background-color: green;
+            color: lightblue;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 1%;
+        }
+
+        /*media query*/
+
+        @media screen and (max-width: 768px) {
+            #contenedor {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto;
+            }
+
+            .s1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                width:100%;
+            }
+            .s2{
+                grid-column: 1/2;
+                grid-row: 2/3;
+                width:100%;
+            }
+            .s3{
+                grid-column: 1/2;
+                grid-row: 3/4;
+                width:100%;
+            }
+            .s4{
+                grid-column: 1/2;
+                grid-row: 4/5;
+                width:100%;
+            }
+
+            
+        }
+
     </style>
 </head>
 <body>
@@ -109,35 +135,36 @@
         <h1>Alberto Gómez</h1>
     </header>
     <nav>
-        <a href="">Foto</a>
-        <a href="">Presentacion</a>
-        <a href="">Estudios</a>
-        <a href="">Aficciones</a>
+        <a href="#foto">Foto</a>
+        <a href="#presentacion">Presentación</a>
+        <a href="#estudios">Estudios</a>
+        <a href="#aficiones">Aficiones</a>
     </nav>
     <div id="contenedor">
-        <section class="s1">
-            <img src="img/dibujo.jpg" alt="">
+        <section class="s1" id="foto">
+            <img src="img/dibujo.jpg" alt="Dibujo">
         </section>
-        <section class="s2">
-            <h2>PRESENTACION</h2>
+        <section class="s2" id="presentacion">
+            <h2>Presentación</h2>
             <p>Alberto Gómez Escribano</p>
             <p>Edad: 27 años</p>
             <p>Fecha Nacimiento: 17/11/1997</p>
         </section>
-        <section class="s3">
-            <h2>ESTUDIOS</h2>
-            <p>Tecnico Medio Sistemas Microinformaticos y Redes</p>
-            <p>Tecnico Superior Administracion de Sistemas en Red</p>
+        <section class="s3" id="estudios">
+            <h2>Estudios</h2>
+            <p>Técnico Medio Sistemas Microinformáticos y Redes</p>
+            <p>Técnico Superior Administración de Sistemas en Red</p>
             <p>Aprobadas con plaza oposiciones OEP 2024 TAI</p>
         </section>
-        <section class="s4">
-            <h2>AFICIONES</h2>
-            <p>Gimansio</p>
-            <p>Jugar al futbol</p>
+        <section class="s4" id="aficiones">
+            <h2>Aficiones</h2>
+            <p>Gimnasio</p>
+            <p>Jugar al fútbol</p>
             <p>Pasear con mi perro</p>
         </section>
+    </div>
     <footer>
-
+        <p>© 2025 Mi Sitio Web. Todos los derechos reservados. Alberto Gómez</p>
     </footer>
 </body>
 </html>
